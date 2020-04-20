@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AlphaCards from "./AlphaCards";
 
 class GameBox extends Component {
 	// onClose = (e) => {
@@ -8,7 +9,8 @@ class GameBox extends Component {
 		return (
 			<div className="GameContainer">
 				<div class="GameBox" id="GameBox">
-					<h4>GameBox Window</h4>
+					<h1 className="title">GameBox Window</h1>
+					<AlphaCards />
 				</div>
 				<button className="Submit">Submit</button>
 			</div>
