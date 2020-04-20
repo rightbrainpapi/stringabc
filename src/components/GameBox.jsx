@@ -34,7 +34,7 @@ class GameBox extends Component {
 		],
 		alphaChoice: [],
 		submit: false,
-		minutes: 3,
+		minutes: 1,
 		seconds: 0,
 	};
 	componentDidMount() {
@@ -71,9 +71,14 @@ class GameBox extends Component {
 				<div className="GameBox" id="GameBox">
 					<div className="HeaderSect">
 						<h1 className="title">AlphaCards Window </h1>
-						<h3 className="Timer">
-							{minutes}:{seconds < 10 ? `0${seconds}` : seconds}
-						</h3>
+						{minutes === 0 && seconds === 0 ? (
+							<h3 className="Timer">Bye-Bye</h3>
+						) : (
+							<h3>
+								Time Remaining: {minutes}:
+								{seconds < 10 ? `0${seconds}` : seconds}
+							</h3>
+						)}
 					</div>
 					<AlphaCards />
 					<AlphaChoice />
