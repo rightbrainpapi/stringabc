@@ -5,22 +5,22 @@ class AlphaCards extends Component {
 		return (
 			<div className="AlphaCardsContainer">
 				<div class="AlphaCards" id="AlphaCards">
-					<div className="letter">A</div>
+					<div className="Letter">A</div>
 				</div>
 
 				<div class="AlphaCards" id="AlphaCards">
-					<div className="letter">B</div>
+					<div className="Letter">B</div>
 				</div>
 
 				<div class="AlphaCards" id="AlphaCards">
-					<div className="letter">A</div>
+					<div className="Letter">A</div>
 				</div>
 
 				<div class="AlphaCards" id="AlphaCards">
-					<div className="letter">?</div>
+					<div className="Letter">?</div>
 				</div>
 				<div class="AlphaCards" id="AlphaCards">
-					<div className="letter">?</div>
+					<div className="Letter">?</div>
 				</div>
 			</div>
 		);
