@@ -34,6 +34,8 @@ class GameBox extends Component {
 		],
 		alphaChoice: [],
 		submit: false,
+		minutes: 3,
+		seconds: 0,
 	};
 	submitChoice = (e) => {
 		console.log("submitting the Choice");
@@ -43,12 +45,15 @@ class GameBox extends Component {
 	};
 
 	render() {
+		const { minutes, seconds } = this.state;
 		return (
 			<div className="GameContainer">
 				<div className="GameBox" id="GameBox">
 					<div className="HeaderSect">
-						<h1 className="title">AlphaCards Window</h1>
-						<h3 className="Timer">0:30</h3>
+						<h1 className="title">AlphaCards Window </h1>
+						<h3 className="Timer">
+							{minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+						</h3>
 					</div>
 					<AlphaCards />
 					<AlphaChoice />
